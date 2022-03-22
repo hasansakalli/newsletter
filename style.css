@@ -1,0 +1,138 @@
+*{
+    box-sizing:border-box ;
+    margin: 0;
+    padding: 0;
+   
+
+}
+body{
+    color: #0b3e64;
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    background-image: url("backgroundpattern_1500x.webp");
+    background-size:cover;
+    background-repeat: no-repeat;
+background-position: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: grid;
+    place-content: center;
+
+}
+img{
+    width: 90%;
+    height: 90%;
+    margin: auto;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   }
+   .wrapper> *{
+       margin-bottom: 1em;
+       text-align: center;
+   }
+.keep{
+    font-size: 12px;
+    line-height: 20px;
+    color:#0b3e64;
+    font-weight: 600;
+}
+.newsletter{
+    font-size: 20px;
+    line-height: 33px;
+    color:#0b3e64;
+    font-weight: 600;
+    letter-spacing: 4px;
+
+}
+.text{
+    font-size: 14px;
+    line-height: 29px;
+    color:#0b3e64;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .input_box{
+      display: flex;
+      gap: 1em;
+  }
+#email{
+
+width: 395px;
+display: block;
+padding: 12px 14px;
+border: 1px solid #deddd8;
+line-height: normal;
+background-color: transparent;
+  }
+  
+.btn.btn-background-slide{
+  background-color: transparent;
+  color: rgb(247, 243, 243);
+  padding: 14px 28px;
+  border: 0.2px solid #0b3e64;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  letter-spacing: 0.2em;
+  
+}
+
+.btn.btn-background-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  color: rgb(10, 10, 10);
+  background-color:#0b3e64;
+  transition: transform 300ms ease;
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+.btn.btn-background-slide:hover::before {
+  transform: scaleX(0);
+}
+
+.btn.btn-background-slide {
+  transition: color 300ms ease-in-out;
+  z-index: 1;
+}
+
+.btn.btn-background-slide:hover {
+  color: #0b3e64;
+}
+  
+  @media screen and (max-width: 700px) {
+    .input_box{
+        display: grid;
+        gap: 1em;
+        align-items: center;
+        width: 100%;
+        
+    }
+    .btn.btn-background-slide {
+        width: 100%}
+
+      #email{
+        width: 100%;
+      }  
+      span{
+          display: none;
+      }
+    
+  }
+  
